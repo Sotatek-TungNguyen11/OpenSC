@@ -2841,10 +2841,14 @@ md_query_key_sizes(PCARD_DATA pCardData, DWORD dwKeySpec, CARD_KEY_SIZES *pKeySi
 		keysize = 0;
 		for (i = 0; i < count; i++) {
 			algo_info = vs->p15card->card->algorithms + i;
+			logprintf(pCardData, 0,
+					  "DEBUG algo_info algorithm=%d, flags=0x%x, key_length=%d\n",
+					  algo_info->algorithm, algo_info->flags, algo_info->key_length);
 			if (algo_info->algorithm == SC_ALGORITHM_EC) {
 				flag = SC_ALGORITHM_ECDH_CDH_RAW;
 				/* TODO  check if namedCurve matches Windows supported curves */
 				/* ECDHE */
+
 				if ((dwKeySpec == AT_ECDHE_P256) && (algo_info->key_length == 256) && (algo_info->flags & flag)) {
 					keysize = 256;
 					break;
