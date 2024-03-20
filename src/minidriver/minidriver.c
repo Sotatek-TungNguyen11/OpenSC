@@ -260,13 +260,13 @@ static void logprintf(PCARD_DATA pCardData, int level, _Printf_format_string_ co
  * flush to get last message before any crash
  * close so as the file is not left open during any wait.
  */
-	DWORD md_debug = 0;
+	DWORD md_debug = 1;
 	size_t sz = sizeof(md_debug);
 	int rv;
 
-	rv = sc_ctx_win32_get_config_value("CARDMOD_LOW_LEVEL_DEBUG",
+	rv = SC_SUCCESS; /*sc_ctx_win32_get_config_value("CARDMOD_LOW_LEVEL_DEBUG",
 			"MiniDriverDebug", "Software\\OpenSC Project\\OpenSC",
-			(char *)(&md_debug), &sz);
+			(char *)(&md_debug), &sz);*/
 	if (rv == SC_SUCCESS && md_debug != 0)   {
 		FILE *lldebugfp = fopen("C:\\tmp\\md.log","a+");
 		if (lldebugfp)   {

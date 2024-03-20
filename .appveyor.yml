@@ -18,9 +18,9 @@ environment:
   # not compatible with OpenSSL 1.1.1:
   # - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
   #   VCVARSALL: "%VS120COMNTOOLS%/../../VC/vcvarsall.bat"
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    VCVARSALL: "%VS140COMNTOOLS%/../../VC/vcvarsall.bat"
-    DO_PUSH_ARTIFACT: yes
+  # - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+  #   VCVARSALL: "%VS140COMNTOOLS%/../../VC/vcvarsall.bat"
+  #   DO_PUSH_ARTIFACT: yes
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     VCVARSALL: "%ProgramFiles(x86)%/Microsoft Visual Studio/2017/Community/VC/Auxiliary/Build/vcvarsall.bat"
   # not compatible with WiX 3.11.2:
