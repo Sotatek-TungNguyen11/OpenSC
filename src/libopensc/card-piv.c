@@ -549,7 +549,7 @@ static const struct sc_atr_table piv_atrs[] = {
 	// Yubikey5
 	{"3b:fd:13:00:00:81:31:fe:15:80:73:c0:21:c0:57:59:75:62:69:4b:65:79:40",
 		"ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff",
-		, NULL, SC_CARD_TYPE_PIV_II_800_73_4, 0, NULL},
+		NULL, SC_CARD_TYPE_PIV_II_800_73_4, 0, NULL},
 
 	{ NULL, NULL, NULL, 0, 0, NULL }
 };
