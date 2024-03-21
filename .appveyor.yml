@@ -1,8 +1,8 @@
 version: 0.25.0.{build}
 
 platform:
-  # - x86
-  - x64
+  - x86
+  # - x64
 
 configuration:
   - Release
