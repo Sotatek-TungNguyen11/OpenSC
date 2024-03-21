@@ -24,7 +24,7 @@
  */
 
 #include "config.h"
-#ifdef ENABLE_MINIDRIVER
+// #ifdef ENABLE_MINIDRIVER
 
 #ifdef _MANAGED
 #pragma managed(push, off)
@@ -7271,4 +7271,4 @@ BOOL APIENTRY DllMain( HINSTANCE hinstDLL,
 #ifdef _MANAGED
 #pragma managed(pop)
 #endif
-#endif
+// #endif
